@@ -151,7 +151,7 @@ export const ITEMS_PER_PAGE = 10;
 
 export const STORY_SORT_OPTIONS = {
   LAST_MODIFIED: 'modified',
-  LAST_OPENED: 'modified',
+  LAST_OPENED: false,
   DATE_CREATED: 'date',
   CREATED_BY: 'story_author',
   NAME: 'title',
@@ -172,11 +172,11 @@ export const ORDER_BY_SORT = {
 
 export const STORY_SORT_MENU_ITEMS = [
   {
-    label: __('Last modified WIP', 'web-stories'), // default
+    label: __('Last modified', 'web-stories'), // default
     value: STORY_SORT_OPTIONS.LAST_MODIFIED,
   },
   {
-    label: __('Last opened WIP', 'web-stories'),
+    label: __('Last opened', 'web-stories'),
     value: STORY_SORT_OPTIONS.LAST_OPENED,
   },
   {
