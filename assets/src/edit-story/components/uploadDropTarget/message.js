@@ -17,8 +17,9 @@
 /**
  * External dependencies
  */
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * WordPress dependencies
@@ -91,4 +92,4 @@ UploadDropTargetMessage.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-export default UploadDropTargetMessage;
+export default React.memo(UploadDropTargetMessage);

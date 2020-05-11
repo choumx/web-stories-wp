@@ -18,7 +18,8 @@
  * External dependencies
  */
 import styled from 'styled-components';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
+
 import { rgba } from 'polished';
 
 /**
@@ -107,4 +108,4 @@ function FramesLayer() {
   );
 }
 
-export default FramesLayer;
+export default React.memo(FramesLayer);
