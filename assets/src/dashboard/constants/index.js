@@ -101,5 +101,6 @@ export const ITEMS_PER_PAGE = 10;
 
 export * from './animation';
 export * from './direction';
+export * from './savedTemplates';
 export * from './stories';
 export * from './templates';
