@@ -47,6 +47,7 @@ import {
   PageHeading,
   StoryGridView,
 } from '../shared';
+import { STORY_SORT_MENU_ITEMS } from '../../../constants';
 
 function Header({ search, stories, view, sort }) {
   const listBarLabel = sprintf(
@@ -72,6 +73,7 @@ function Header({ search, stories, view, sort }) {
         listBarLabel={listBarLabel}
         layoutStyle={view.style}
         currentSort={sort.value}
+        pageSortOptions={STORY_SORT_MENU_ITEMS}
         handleSortChange={sort.set}
         sortDropdownAriaLabel={__(
           'Choose sort option for display',

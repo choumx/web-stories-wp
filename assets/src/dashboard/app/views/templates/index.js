@@ -42,7 +42,8 @@ import { DropdownContainer } from '../../../components/dropdown';
 import {
   VIEW_STYLE,
   DROPDOWN_TYPES,
-  STORY_SORT_OPTIONS,
+  TEMPLATES_GALLERY_SORT_MENU_ITEMS,
+  TEMPLATES_GALLERY_SORT_OPTIONS,
 } from '../../../constants';
 import { clamp, usePagePreviewSize } from '../../../utils/';
 import { ApiContext } from '../../api/apiProvider';
@@ -73,7 +74,7 @@ function TemplatesGallery() {
   const [viewStyle, setViewStyle] = useState(VIEW_STYLE.GRID);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentTemplateSort, setCurrentTemplateSort] = useState(
-    STORY_SORT_OPTIONS.LAST_MODIFIED
+    TEMPLATES_GALLERY_SORT_OPTIONS.POPULAR
   );
   const { pageSize } = usePagePreviewSize({
     thumbnailMode: viewStyle === VIEW_STYLE.LIST,
@@ -227,6 +228,7 @@ function TemplatesGallery() {
                 layoutStyle={viewStyle}
                 handleLayoutSelect={handleViewStyleBarButtonSelected}
                 currentSort={currentTemplateSort}
+                pageSortOptions={TEMPLATES_GALLERY_SORT_MENU_ITEMS}
                 handleSortChange={setCurrentTemplateSort}
                 sortDropdownAriaLabel={__(
                   'Choose sort option for display',

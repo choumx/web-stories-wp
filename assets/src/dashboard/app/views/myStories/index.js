@@ -36,7 +36,11 @@ import {
   Layout,
   ToggleButtonGroup,
 } from '../../../components';
-import { VIEW_STYLE, STORY_STATUSES } from '../../../constants';
+import {
+  VIEW_STYLE,
+  STORY_STATUSES,
+  STORY_SORT_MENU_ITEMS,
+} from '../../../constants';
 import { ReactComponent as PlayArrowSvg } from '../../../icons/playArrow.svg';
 import { ApiContext } from '../../api/apiProvider';
 import FontProvider from '../../font/fontProvider';
@@ -180,6 +184,7 @@ function MyStories() {
         layoutStyle={view.style}
         handleLayoutSelect={view.toggleStyle}
         currentSort={sort.value}
+        pageSortOptions={STORY_SORT_MENU_ITEMS}
         handleSortChange={sort.set}
         sortDropdownAriaLabel={__(
           'Choose sort option for display',
